@@ -1,0 +1,24 @@
+/***************************************
+ * 页面模块
+ ***************************************/
+import { NgModule } from '@angular/core';
+// CommonModule 提供 *ngFor、*ngIf 等常用指令
+import { CommonModule } from '@angular/common';
+// FormsModule 提供 [(ngModel)] ，用于模版表单和需要双向绑定的控件
+// ReactiveFormsModule 用于响应式表单
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// 组件库，
+// 可以使用所有的高级组件，以及 NG-ZORRO 的所有组件，
+// 请勿自行从 ng-zorro-antd 导入任何成员，切记！
+import { MtComponentsModule } from '@movitech/ng-components';
+
+import { ${upperName}RoutingModule } from './${inputName}-routing.module';
+import { ${upperName}Component } from './${inputName}.component';
+import { ${upperName}Service } from './${inputName}.service';
+
+@NgModule({
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, MtComponentsModule, ${upperName}RoutingModule],
+  declarations: [${upperName}Component],
+  providers: [${upperName}Service]
+})
+export class ${upperName}Module { }

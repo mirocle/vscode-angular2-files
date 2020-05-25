@@ -1,0 +1,15 @@
+/***************************************
+ * 模块服务
+ ***************************************/
+import { Injectable } from '@angular/core';
+// 所有的 API 请求请使用 MtApiRequest，它会默认未请求加上 /api 前缀，
+// 如果不需要前缀，可以使用 MtHttpRequest。
+// 切勿直接使用 HttpClient，也请勿在项目任何模块导入 HttpClientModule，切记！
+import { MtApiRequest } from '@movitech/ng-components';
+
+@Injectable()
+export class ${upperName}Service {
+
+constructor(private api: MtApiRequest) { }
+
+}

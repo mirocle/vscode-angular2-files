@@ -1,0 +1,21 @@
+/***************************************
+ * 路由模块
+ * 一般情况下，整个文件无须修改
+ ***************************************/
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { ${upperName}Component } from './${inputName}.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ${upperName}Component
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class ${upperName}RoutingModule { }

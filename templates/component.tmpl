@@ -1,0 +1,24 @@
+/***************************************
+ * 组件
+ * 页面模板 test.component.html
+ * 样式表 test.component.css
+ ***************************************/
+import { Component, OnInit } from '@angular/core';
+
+import { ${upperName}Service } from './${inputName}.service';
+
+@Component({
+  selector: '${cmpSelector}',
+  ${componentInlineTemplate ? `template: \`\n   <p>\n  \t\t${inputName} Works!\n   </p>\n  \`` : `templateUrl: './${inputName}.component.html'`},
+  ${componentInlineStyle ? 'styles: []' : `styleUrls: ['./${inputName}.component.${defaultsStyleExt}']`}${componentViewEncapsulation !== 'Emulated' ? `,\n  encapsulation: ViewEncapsulation.${componentViewEncapsulation}` : ''}${componentChangeDetection !== 'Default' ? `,\n  changeDetection: ChangeDetectionStrategy.OnPush` : ''}
+})
+export class ${upperName}Component implements OnInit {
+
+  // 默认注入了模块服务 TestService ，
+  // 可以将 API 请求、业务逻辑等写入其中。
+  constructor(private service: ${upperName}Service) { }
+
+  ngOnInit() {
+  }
+
+}
